@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="container mt-5">
+    <h2 class="text-center mb-4">To-Do List</h2>
+
+    <div class="form-inline justify-content-center mb-3">
+        <input type="text" id="task" class="form-control mr-2" placeholder="Add your task..." />
+        <button type="button" class="btn btn-primary" onclick="submit()">
+            +
+        </button>
+    </div>
+
+    <div style="gap: 20px" class="form-inline justify-content-center mb-4">
+        <input type="text" id="search" class="form-control mr-2" placeholder="Search task..." />
+        <button class="btn btn-secondary" onclick="search()">SEARCH</button>
+        <button class="btn btn-secondary" onclick="sortTasks()">Sort A-Z</button><br />
+        <button onclick="deleteall()">DELETEALL</button>
+    </div>
+
+    <table class="table table-bordered text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th>TASK</th>
+                <th>ACTIONS</th>
+                <th><input type="checkbox" id="checkbox" name="checkbox" /></th>
+            </tr>
+        </thead>
+        <tbody id="table"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
